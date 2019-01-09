@@ -1,3 +1,4 @@
+<?php include("variables.php"); ?>
 <html>
     <head>
         <title>This is my PHP website</title>
@@ -34,8 +35,23 @@
             function writeHello($firstname){
                 echo "Hello " . $firstname;
             }
-            writeHello("Nawanshu");
+            writeHello("Nawanshu <br /> <br />");
 
+            echo(rand(1, 10)."<br />");
+
+            echo(date('Y'));
+
+            $str = "Welcome to the PHP world!<br />";
+            
+            echo($str);
+
+            echo(str_replace("Welcome", "Welcome Nawanshu", $str));
+
+            echo(strtoupper("nawanshu <br />"));
+            echo $site_title;
+            $site_title = "Replacing main title";
+            echo $site_title;
+            
         ?>
         </h1>
     </center>
