@@ -20,4 +20,8 @@ function confirm($result) {
     }
 }
 
+function login_user() {
+    
+}
+
 ?>
