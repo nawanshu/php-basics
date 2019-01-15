@@ -21,7 +21,18 @@ function confirm($result) {
 }
 
 function login_user() {
-    
+    if(isset($_POST['submit'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+    $query = query("SELECT * FROM users WHERE username = '{$username}' AND '{$password}'");
+    confirm($query);
+
+    if(mysqli_num_rows($query) == 0) {
+        echo("Successful");
+        redirect("login.php");
+    }
+    }
 }
 
 ?>
